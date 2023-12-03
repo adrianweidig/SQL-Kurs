@@ -2,7 +2,7 @@
 CREATE DATABASE testdb;
 
 -- Löscht eine Datenbank
-DROP DATABASE  testdb;
+DROP DATABASE testdb;
 
 -- Erzeugt eine Datenbank, wenn diese noch nicht existiert
 CREATE DATABASE IF NOT EXISTS testdb;

@@ -55,7 +55,9 @@ CREATE TABLE IF NOT EXISTS Mitarbeiter_Datenbank.Mitarbeiteraufgaben
     -- Prüft im Anschluss den Wertebereich zusätzlich mit OR zur Veranschaulichung
     Istverteilungsbetrag NUMERIC(3, 1) CHECK (0.0 < Istverteilungsbetrag OR Istverteilungsbetrag < 1.0),
 
-    -- Erzeugt den Primary Key aus einer Kombination aus der Aufgaben- und Mitarbeiternummer
+    -- Erzeugt den Primary Key aus einer Kombination aus der Aufgaben- und Mitarbeiternummer,
+    -- BEACHTE, dass beide Nummern somit auch als UNIQUE und NOT NULL definiert sind somit
+    -- sowohl die Aufgaben- als auch die Mitarbeiternummer nur einmalig vorkommen darf.
     PRIMARY KEY (Aufgabennummer, Mitarbeiternummer)
 );
 

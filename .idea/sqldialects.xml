@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="SqlDialectMappings">
-    <file url="file://$PROJECT_DIR$/01_DDL(Data Description Language)/DB_Erzeugen_Loeschen.sql" dialect="MariaDB" />
-    <file url="file://$PROJECT_DIR$/01_DDL(Data Description Language)/Foreign_Primary_Keys.sql" dialect="MariaDB" />
-    <file url="file://$PROJECT_DIR$/01_DDL(Data Description Language)/Tabelle_Aendern.sql" dialect="MariaDB" />
-    <file url="file://$PROJECT_DIR$/01_DDL(Data Description Language)/Tabelle_Erzeugen.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/01_DDL(Data Description Language)/01_DB_Erzeugen_Loeschen.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/01_DDL(Data Description Language)/02_Tabelle_Erzeugen.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/01_DDL(Data Description Language)/03_Foreign_Primary_Keys.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/01_DDL(Data Description Language)/04_Tabelle_Aendern.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/01_DDL(Data Description Language)/05_EigeneViews.sql" dialect="MariaDB" />
     <file url="PROJECT" dialect="MariaDB" />
   </component>
 </project>
