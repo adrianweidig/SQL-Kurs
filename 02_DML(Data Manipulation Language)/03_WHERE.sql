@@ -57,7 +57,7 @@ SELECT * FROM Mitarbeiter WHERE 30 <= Lebensalter AND Lebensalter <= 40;
 
 -- LIKE und BETWEEN
 -- -------------------------------
--- IN und EXISTS
+-- IN und EXISTS und IS (NOT) NULL
 
 -- Zeigt alle Mitarbeiter an, deren Orte zu den angegeben in Klammern passen (Listenabgleich)
 SELECT * FROM Mitarbeiter WHERE Ort IN ('Berlin', 'München');
@@ -65,4 +65,8 @@ SELECT * FROM Mitarbeiter WHERE Ort IN ('Berlin', 'München');
 -- Zeigt ALLE Mitarbeiter an, wenn Mindestens ein Mitarbeiter mit M im Namen in der Tabelle existiert
 SELECT * FROM Mitarbeiter WHERE EXISTS (SELECT * FROM Mitarbeiter WHERE Name Like '%M%');
 
--- IN und EXISTS
+-- Funktioniert nur, wenn NULL Werte überhaupt vorhanden / Nicht vorhanden sind
+-- Zeigt alle Mitarbeiter an bei denen der Wert der Spalte Ort NICHT NULL ist.
+SELECT * FROM Mitarbeiter WHERE Ort IS NOT NULL; 
+
+-- IN und EXISTS und IS (NOT) NULL
