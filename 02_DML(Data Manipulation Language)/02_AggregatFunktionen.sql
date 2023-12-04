@@ -79,3 +79,12 @@ SELECT CURRENT_TIME;
 
 -- 18. CURRENT_TIMESTAMP - Gibt das aktuelle Datum und die aktuelle Uhrzeit zurück
 SELECT CURRENT_TIMESTAMP;
+
+
+-- Weitere Beispiele mit Kombination mehrerer Möglichkeiten:
+-- Weitere Beispiele zu den ersten 5 Punkten (COUNT, SUM, AVG, MAX, MIN)
+
+-- Beispiel 1: Kombination von COUNT und SUM
+-- Zählt die Anzahl der Mitarbeiter und summiert ihre Telefonnummern
+SELECT COUNT(*) AS AnzahlMitarbeiter, SUM(Telefonnummer) AS AnzahlTelefonnummern FROM Mitarbeiter;
+
