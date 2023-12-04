@@ -13,15 +13,28 @@ CREATE TABLE Rechnungsverzeichnis
 (
     ID INTEGER PRIMARY KEY,
     KundenID INTEGER,
-    UnnoetigeSpalte VARCHAR(100),
+    Betrag DOUBLE,
 
     FOREIGN KEY (KundenID) REFERENCES Kundenverzeichnis(ID) ON UPDATE NO ACTION ON DELETE CASCADE
 );
 
 -- -----------------------
+-- VIEW
 
+-- Erzeugt (hier noch simpel) eine VIEW, welche eine Ansicht einer Tabelle
+-- darstellt. Dies sieht für den Nutzer wie eine neue Tabelle aus, welche jedoch
+-- nur die Daten der entsprechenden Anweisung nach CREATE VIEW … AS darstellt
+-- und als sogenannte VIEW speichert. Diese ist im Nachhinein abrufbar.
+CREATE VIEW RechnungenKunde1 AS SELECT Name FROM Kundenverzeichnis WHERE id = 1;
 
+-- Löscht die VIEW wie zuvor
+DROP VIEW RechnungenKunde1;
 
+-- ZUSATZPARAMETER AM ENDE:
+-- RESTRICT – Das Löschen scheitert, wenn die Sicht referenziert wird
+-- CASCADE  - Das 
+
+-- VIEW
 -- -----------------------
 
 DROP DATABASE IF EXISTS TypenDatenbank;
