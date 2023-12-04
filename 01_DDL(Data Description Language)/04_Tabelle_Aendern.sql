@@ -5,6 +5,8 @@ USE AenderungsDatenbank;
 CREATE TABLE Kundenverzeichnis
 (
     ID          INTEGER PRIMARY KEY,
+
+    -- Beschränkt die Größe der Spaltenwerte auf MAXIMAL 10 Zeichen
     Name        VARCHAR(10),
     Lebensalter INTEGER
 );
@@ -39,6 +41,13 @@ ALTER TABLE  Rechnungsverzeichnis ADD CONSTRAINT Betragsminimum CHECK ( Betrag >
 
 -- Löschen des Constraints
 ALTER TABLE Rechnungsverzeichnis DROP CONSTRAINT Betragsminimum;
+
+-- Bearbeitet die Eigenschaften der Spalte Name, sodass die Größenbeschränkung
+-- auf 50 angehoben wird. 
+-- BEACHTE:
+-- Sollten betroffene Daten mit einer nun kleineren Beschränkung auskommen
+-- müssen so schlägt der Befehl fehl
+ALTER TABLE Kundenverzeichnis MODIFY COLUMN Name VARCHAR(50);
 
 -- ------ ALTER TABLE -------------
 
