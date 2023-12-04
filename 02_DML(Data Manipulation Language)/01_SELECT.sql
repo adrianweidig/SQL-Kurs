@@ -10,4 +10,9 @@ SELECT * FROM Mitarbeiteraufgaben;
 -- Filtert die Auswahl anhand der WHERE KlauselMitarbeiter
 SELECT * FROM Mitarbeiteraufgaben WHERE istverteilungsbetrag > 0.5;
 
+-- Wählt alle Elemente aus mehreren Tabellen aus
+SELECT * FROM Mitarbeiter, Mitarbeiteraufgaben;
+-- IST DAS GLEICHE WIE:
+SELECT Mitarbeiter.*, Mitarbeiteraufgaben.* FROM Mitarbeiter CROSS JOIN Mitarbeiteraufgaben;
+
 -- ------ SELECT -------------
