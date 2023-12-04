@@ -12,6 +12,11 @@ SELECT * FROM Mitarbeiter ORDER BY Lebensalter DESC;
 -- 3. SELECT mit LIMIT - Zeigt die ersten zwei Mitarbeiter an
 SELECT * FROM Mitarbeiter LIMIT 2;
 
+-- 4. SELECT in Verbindung mit anderen Unterfunktionen
+-- Hier wird zuerst das rechte SELECT ausgewertet. Als Ergebnis wird hier nur ein Ort zurückgegeben.
+-- Dieser zurückgegebene Ort wird dann in den Vergleich von Ort mit eingefügt.
+SELECT Name FROM Mitarbeiter WHERE Ort = (SELECT ORT FROM Mitarbeiter WHERE Mitarbeiternummer = 'M002');
+
 -- Beispiel: WHERE-Klauseln zu den Aggregatfunktionen
 
 -- 1. COUNT mit WHERE-Klausel - Zählt die Anzahl der Mitarbeiter, die älter als 30 Jahre sind
