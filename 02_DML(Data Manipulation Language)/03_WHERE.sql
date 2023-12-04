@@ -1,4 +1,6 @@
 -- NUTZEN DER DATENBANK UND TABELLE AUS 00_DatenbankUndTabellen.sql
+
+-- -------------------------------
 -- WHERE Klausel
 
 -- Beispiele ohne Aggregatfunktionen
@@ -34,3 +36,23 @@ SELECT MAX(Lebensalter) FROM Mitarbeiter WHERE Ort = 'München';
 -- 5. MIN mit WHERE-Klausel - Findet das minimale Lebensalter der Entwickler
 SELECT MIN(Lebensalter) FROM Mitarbeiter WHERE Beruf = 'Entwickler';
 
+-- WHERE Klausel
+-- -------------------------------
+-- LIKE und BETWEEN
+
+-- Wählt alle Mitarbeiter aus, welche im Namen ein M haben. (Nicht Case-Sensitive)
+SELECT * FROM Mitarbeiter WHERE Name LIKE '%M%';
+
+-- Wählt alle Mitarbeite aus, welche im Namen KEIN M enthalten. (Auch nicht Case-Sensitive)
+SELECT * FROM Mitarbeiter WHERE Name NOT Like '%M%';
+
+-- Kombination mehrerer Bedingungen (Wer hat ein M im Namen und ist Entwickler)
+SELECT * FROM Mitarbeiter WHERE Name Like '%M%' AND Beruf = "Entwickler";
+
+-- Between vergleicht die beiden Seiten und ist äquivalent zu x <= y AND y <= z
+-- Wäht alle Mitarbeiter aus, welche zwischen 30 und 40 sind
+SELECT * FROM Mitarbeiter WHERE Lebensalter BETWEEN 30 AND 40;
+-- äquivalent zu:               x  <=    y        AND     y       <= z
+SELECT * FROM Mitarbeiter WHERE 30 <= Lebensalter AND Lebensalter <= 40; 
+
+-- LIKE und BETWEEN
