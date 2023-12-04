@@ -32,7 +32,7 @@ DROP VIEW RechnungenKunde1;
 
 -- ZUSATZPARAMETER AM ENDE:
 -- RESTRICT – Das Löschen scheitert, wenn die Sicht referenziert wird
--- CASCADE  - Das 
+-- CASCADE  - Das Löschen der Sicht sorgt dafür, dass alle Referenzen ebenfalls gelöscht werden
 
 -- VIEW
 -- -----------------------
