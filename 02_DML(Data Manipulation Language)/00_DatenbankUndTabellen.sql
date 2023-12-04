@@ -12,9 +12,9 @@ CREATE TABLE IF NOT EXISTS Mitarbeiter
     Telefonnummer     INTEGER CHECK (1000 < Telefonnummer < 9999)
 );
 
-CREATE TABLE IF NOT EXISTS Mitarbeiter_Datenbank.Mitarbeiteraufgaben
+CREATE TABLE IF NOT EXISTS Mitarbeiteraufgaben
 (
-    Aufgabennummer       CHARACTER(2),
+    Aufgabennummer       CHARACTER(3),
     Mitarbeiternummer    CHARACTER(5) REFERENCES Mitarbeiter (Mitarbeiternummer),
     Istverteilungsbetrag NUMERIC(3, 1) CHECK (0.0 < Istverteilungsbetrag OR Istverteilungsbetrag < 1.0),
     PRIMARY KEY (Aufgabennummer, Mitarbeiternummer)
@@ -30,7 +30,7 @@ VALUES
 
 -- Beispiel-Einträge für die Tabelle Mitarbeiter_Datenbank.Mitarbeiteraufgaben
 
-INSERT INTO Mitarbeiter_Datenbank.Mitarbeiteraufgaben (Aufgabennummer, Mitarbeiternummer, Istverteilungsbetrag)
+INSERT INTO Mitarbeiteraufgaben (Aufgabennummer, Mitarbeiternummer, Istverteilungsbetrag)
 VALUES
     ('A01', 'M001', 0.8),
     ('A02', 'M002', 0.6),

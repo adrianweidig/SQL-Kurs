@@ -1,16 +1,4 @@
 
-T
-$01_Grundlagen/Datenbank_Erzeugen.sql,d\5\d5e554e9d761317adf7493a3991bbd48487ae4cd
-V
-&01_Grundlagen/DB_Erzeugen_Loeschen.sql,8\9\895b3dec14f83a85393ea873361e5b675c60ae35
-j
-:01_DDL(Data Description Language)/DB_Erzeugen_Loeschen.sql,e\c\ece80302c2a5b481ca63c0cd9955ffd5fdbc39cd
-f
-601_DDL(Data Description Language)/Tabelle_Erzeugen.sql,0\f\0f1609ce1469d3f891f8cf3e6dbd621cd646d93e
-e
-501_DDL(Data Description Language)/Tabelle_Aendern.sql,9\5\9592625fd25b5d84608c936e24ba3fc5ae9442b4
-j
-:01_DDL(Data Description Language)/Foreign_Primary_Keys.sql,1\5\1585477a33e79ab926eb491fbc8b896e0c9769ae
 >
 .gitattributes,2\4\24139dae656713ba861751fb2c2ac38839349a7a
 m
@@ -22,6 +10,14 @@ m
 h
 801_DDL(Data Description Language)/04_Tabelle_Aendern.sql,e\e\eefc4a34e1086a35ea569128b55b475455a87c2b
 d
-401_DDL(Data Description Language)/05_EigeneTypen.sql,c\e\cea98359d2df0ce4e49ac169e16fdcbb48838f45
-d
 401_DDL(Data Description Language)/05_EigeneViews.sql,5\a\5a9d20a7a41b70744beca7b6de7f3feae9197800
+b
+202_DML(Data Manipulation Language)/04_GROUP_BY.sql,1\b\1b9cc81ab25923fda19c368838dde911dd40e3c0
+n
+>02_DML(Data Manipulation Language)/00_DatenbankUndTabellen.sql,a\4\a46474c94476877036f088b39a69cb81a4393500
+`
+002_DML(Data Manipulation Language)/01_SELECT.sql,3\f\3f950eb7a1529118d8cb3e855bcd364a132bc9f0
+l
+<02_DML(Data Manipulation Language)/02_AggregatFunktionen.sql,6\9\695b8c9cc4b032837baf13520b9fe5455b6abac5
+_
+/02_DML(Data Manipulation Language)/03_WHERE.sql,4\c\4ca94e66d95c52e0a531d9bafae718b3ed05f814

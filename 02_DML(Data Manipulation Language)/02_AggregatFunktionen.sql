@@ -43,10 +43,12 @@ SELECT MAX(Lebensalter) FROM Mitarbeiter;
 SELECT MIN(Lebensalter) FROM Mitarbeiter;
 
 -- 6. FIRST - Zeigt den ersten Ort in der Tabelle Mitarbeiter an
-SELECT FIRST(Ort) FROM Mitarbeiter;
+-- NICHT in mariadb möglich
+-- SELECT FIRST(Ort) FROM Mitarbeiter;
 
 -- 7. LAST - Zeigt den letzten Ort in der Tabelle Mitarbeiter an
-SELECT LAST(Ort) FROM Mitarbeiter;
+-- NICHT in mariadb möglich
+-- SELECT LAST(Ort) FROM Mitarbeiter;
 
 -- 8. GROUP_CONCAT - Konkateniert die Namen aller Mitarbeiter
 SELECT GROUP_CONCAT(Name) FROM Mitarbeiter;
