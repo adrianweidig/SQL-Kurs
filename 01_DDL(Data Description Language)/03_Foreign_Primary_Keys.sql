@@ -14,13 +14,14 @@ CREATE TABLE IF NOT EXISTS Rechnungen
 
     -- Referenziert auf die KundenID der Tabelle Kundenverzeichnis und ergänzt die sogenannten
     -- Constraints beim Verhalten, wenn dieser Eintrag gelöscht oder geupdatet wird.
+    -- SYNTAX: FOREIGN KEY NAMEDESFOREIGNKEYS(SPALTENNAME) REFERENCES TABELLENNAME(SPALTENNAME) ...
 
     -- NO ACTION   - Kein zulassen von Änderungen bzw. Löschen solange referenzierte Einträge vorhanden sind
     -- CASCADE     - Änderung bzw. Löschung auf referenzierte Zellen ebenfalls durchführen
     -- SET NULL    - Änderung bzw. Löschung sorgt dafür, dass referenzierte Zellen auf NULL gesetzt werden
     -- SET DEFAULT - Änderung bzw. Löschung setzt den Wert der Zelle auf einen DEFAULT Wert, wobei dieser
     --               dafür auch existent und gültig sein muss.
-    FOREIGN KEY (KundenID) REFERENCES Kundenverzeichnis (KundenID) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY Kunden_FK (KundenID) REFERENCES Kundenverzeichnis (KundenID) ON DELETE CASCADE ON UPDATE CASCADE,
 
     -- ACHTUNG ACHTUNG ACHTUNG --
     -- Dies sorgt dafür, dass auch die KundenID nur einmalig vorkommen darf.
