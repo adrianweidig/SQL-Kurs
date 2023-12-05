@@ -17,6 +17,24 @@ SELECT mitarbeiteraufgaben.Mitarbeiternummer
 FROM mitarbeiteraufgaben
 GROUP BY mitarbeiteraufgaben.Mitarbeiternummer;
 
+-- Wie vorherige Version, nur mit Angabe der Werte für die Spalte Name
+-- Hier werden alle Zeilen in der Spalte Name mit 'TEST' befüllt.
+INSERT INTO mitarbeiter (Mitarbeiternummer, Name)
+SELECT mitarbeiteraufgaben.Mitarbeiternummer, 'TEST'
+FROM mitarbeiteraufgaben
+GROUP BY mitarbeiteraufgaben.Mitarbeiternummer;
+
 -- 2. UPDATE
+-- Ändern aller Zeilen zur zugehörigen Spalte.
+-- Hier werden alle Zeilen in der Spalte Vorname mit LEER befüllt
+UPDATE mitarbeiter SET Vorname = 'LEER';
+
+-- Ändern eines einzelnen Zellwerts zum zugehörigen WHERE (Auch mehrere Zeilen möglich)
+UPDATE mitarbeiter SET Name = 'Heinz' WHERE Mitarbeiternummer = 'M001';
+
+-- Ändern vieler Zellen auf einmal wie zuvor nur einer zusätzlichen Spalte
+UPDATE mitarbeiter SET Name = 'Heinz', Lebensalter = 10 WHERE Mitarbeiternummer = 'M001';
 
 -- 3. DELETE
+-- Löscht Zeilen, welche der WHERE Bedingung entprechen
+DELETE FROM mitarbeiter WHERE Mitarbeiternummer = 'M001';
