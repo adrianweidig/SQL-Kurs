@@ -21,3 +21,5 @@ l
 <02_DML(Data Manipulation Language)/02_AggregatFunktionen.sql,6\9\695b8c9cc4b032837baf13520b9fe5455b6abac5
 _
 /02_DML(Data Manipulation Language)/03_WHERE.sql,4\c\4ca94e66d95c52e0a531d9bafae718b3ed05f814
+^
+.02_DML(Data Manipulation Language)/05_JOIN.sql,8\f\8f1e1ebf68611ebc4263917aa5ae7d5679144b9b

@@ -36,3 +36,5 @@ VALUES
     ('A02', 'M002', 0.6),
     ('A01', 'M003', 0.9),
     ('A03', 'M001', 0.5);
+
+DROP TABLE Mitarbeiter, Mitarbeiteraufgaben;

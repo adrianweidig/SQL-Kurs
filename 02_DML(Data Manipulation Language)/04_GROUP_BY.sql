@@ -23,3 +23,10 @@ SELECT aufgabennummer, AVG(istverteilungsbetrag) FROM Mitarbeiteraufgaben;
 -- 02             | 0.60 (Durchschnitt nur aus 0.6)
 -- 03             | 0.50 (Durchschnitt nur aus 0.5)
 SELECT aufgabennummer, AVG(istverteilungsbetrag) FROM Mitarbeiteraufgaben GROUP BY aufgabennummer;
+
+-- -------------------------------
+-- HAVING
+-- HAVING ersetzt das WHERE auf der Ebene von GROUP BY
+
+SELECT aufgabennummer, AVG(istverteilungsbetrag) FROM Mitarbeiteraufgaben GROUP BY aufgabennummer HAVING AVG(istverteilungsbetrag) > 0.50;
+
