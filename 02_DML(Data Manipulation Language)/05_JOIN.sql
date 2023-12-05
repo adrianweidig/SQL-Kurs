@@ -8,7 +8,14 @@ SELECT mitarbeiter.Name, mitarbeiteraufgaben.Aufgabennummer FROM mitarbeiter JOI
 -- 2. NATURAL JOIN
 -- Zeigt alle Zeilen der SELECT Auswahl an, welche gemeinsame Werte in gleichen Spalten beider Tabellen haben
 -- Zeigt in diesem Fall das gleiche an wie das Beispiel von 1.
+
+-- BEACHTE: Dies funktioniert nur, wenn die Spaltennamen auch gleich sind und somit auffindbar sind
 SELECT mitarbeiter.Name, mitarbeiteraufgaben.Aufgabennummer FROM mitarbeiter NATURAL JOIN mitarbeiteraufgaben;
+
+-- USING
+-- USING erlaubt die explizite Angabe einer Spalte, welche in beiden Tabellen verfügbar ist
+SELECT mitarbeiter.Name, mitarbeiteraufgaben.Aufgabennummer FROM mitarbeiter JOIN mitarbeiteraufgaben USING (Mitarbeiternummer);
+
 
 -- 3. LEFT (OUTER) JOIN
 -- Zeigt ALLE Zeilen der linken Tabelle an, auch wenn diese nicht der ON Bedingung entsprechen,
