@@ -11,7 +11,7 @@ SELECT mitarbeiter.Name, mitarbeiteraufgaben.Aufgabennummer FROM mitarbeiter JOI
 
 -- BEACHTE: Dies funktioniert nur, wenn die Spaltennamen auch gleich sind und somit auffindbar sind
 SELECT mitarbeiter.Name, mitarbeiteraufgaben.Aufgabennummer FROM mitarbeiter NATURAL JOIN mitarbeiteraufgaben;
-
+s
 -- USING
 -- USING erlaubt die explizite Angabe einer Spalte, welche in beiden Tabellen verfügbar ist
 SELECT mitarbeiter.Name, mitarbeiteraufgaben.Aufgabennummer FROM mitarbeiter JOIN mitarbeiteraufgaben USING (Mitarbeiternummer);

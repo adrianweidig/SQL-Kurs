@@ -23,3 +23,9 @@ _
 /02_DML(Data Manipulation Language)/03_WHERE.sql,4\c\4ca94e66d95c52e0a531d9bafae718b3ed05f814
 ^
 .02_DML(Data Manipulation Language)/05_JOIN.sql,8\f\8f1e1ebf68611ebc4263917aa5ae7d5679144b9b
+_
+/02_DML(Data Manipulation Language)/06_UNION.sql,c\e\ce611284b0dca5bea26c25b16a53d465734005af
+_
+/02_DML(Data Manipulation Language)/06_INPUT.sql,1\6\1618f2bd7f3853b891251f2e0015746be7f43206
+n
+>02_DML(Data Manipulation Language)/06_INSERT_UPDATE_DELETE.sql,4\3\4387b7af592b6f15e3af2b411798a23e7fa80116
