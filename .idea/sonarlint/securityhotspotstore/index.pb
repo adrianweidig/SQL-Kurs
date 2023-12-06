@@ -29,3 +29,19 @@ _
 /02_DML(Data Manipulation Language)/06_INPUT.sql,1\6\1618f2bd7f3853b891251f2e0015746be7f43206
 n
 >02_DML(Data Manipulation Language)/06_INSERT_UPDATE_DELETE.sql,4\3\4387b7af592b6f15e3af2b411798a23e7fa80116
+^
+.03_DCL(Data Control Language)/01_ASSERTION.sql,6\7\67c000cee20ee5a2a929697641bfa2b27c4e6fe2
+h
+801_DDL(Data Description Language)/01_CREATE_DATABASE.sql,1\e\1ea11851950bac5c83e8dcfaa390dc52e3ca6e58
+e
+501_DDL(Data Description Language)/02_CREATE_TABLE.sql,a\4\a4edcd3163c93edb4e73ece00c7aa6fc5780cd02
+l
+<01_DDL(Data Description Language)/03_FOREIGN_PRIMARY_KEY.sql,2\4\2475f52951f408870b5a9702f25a0a382476311c
+d
+401_DDL(Data Description Language)/04_ALTER_TABLE.sql,2\f\2f7902d63e842e52ce73a7d64ffe6538fca20784
+d
+401_DDL(Data Description Language)/05_CREATE_VIEW.sql,2\8\2898953868e5d055be3b598fea2156352a09781d
+`
+001_DDL(Data Description Language)/06_Indizes.sql,3\a\3a3af25b1fe5faadfc8fd3095c97dee8637be245
+e
+501_DDL(Data Description Language)/06_CREATE_INDEX.sql,5\3\53519355a3699ec370e187003a00708dfe6f99ef

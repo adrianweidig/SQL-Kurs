@@ -61,5 +61,14 @@ CREATE TABLE IF NOT EXISTS Mitarbeiter_Datenbank.Mitarbeiteraufgaben
     PRIMARY KEY (Aufgabennummer, Mitarbeiternummer)
 );
 
+-- TEMPORÄRE TABELLE ERZEUGEN
+-- Erzeugt eine temporäre Tabelle, welche weiter bearbeitbar ist und
+-- werden gelöscht sobald die Session beendet wurde.
+CREATE TEMPORARY TABLE temp_table AS SELECT * FROM Mitarbeiter;
+
+-- OPTIONALES Löschen der temporären Tabelle
+DROP TEMPORARY TABLE temp_table;
+
 -- Datenbank und Inhalte am Ende löschen
 DROP DATABASE IF EXISTS Mitarbeiter_Datenbank;
+
