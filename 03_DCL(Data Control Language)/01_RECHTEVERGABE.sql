@@ -29,3 +29,10 @@ GRANT REFERENCES ON Mitarbeiteraufgaben TO hugo, boss;
 
 -- Recht wegnehmen
 REVOKE REFERENCES ON Mitarbeiteraufgaben FROM boss;
+
+-- Recht - Rechte zu vergeben
+-- In diesem Fall kann hugo nun die Rechte SELECT an andere weitergebens
+GRANT SELECT ON Mitarbeiter TO hugo WITH GRANT OPTION;
+-- HINWEIS: Die Rechte-Weitergabe mit Beibehaltung der Rechte kann nur erreicht
+-- werden, wenn die Rechte komplett weggenommen und neue ohne GRANT OPTION vergeben
+-- werden.

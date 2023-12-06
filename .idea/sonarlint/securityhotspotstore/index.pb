@@ -49,3 +49,5 @@ b
 203_DCL(Data Control Language)/01_RECHTEVERGABE.sql,7\d\7d70c3df75ad56d2d7eefb156a7fa409d3a12a69
 t
 D04_ACID(Atomity Consistency Isolation Durability)/01_TRANSACTION.sql,b\9\b97ac4e21e09e7e2d7a2a2bf4f21f66602aa16c9
+L
+09_Übungen/01_ProjektDB.sql,9\d\9dee4d12e3ca6679e0b57b7a955595c39a92be1a
