@@ -45,3 +45,7 @@ d
 001_DDL(Data Description Language)/06_Indizes.sql,3\a\3a3af25b1fe5faadfc8fd3095c97dee8637be245
 e
 501_DDL(Data Description Language)/06_CREATE_INDEX.sql,5\3\53519355a3699ec370e187003a00708dfe6f99ef
+b
+203_DCL(Data Control Language)/01_RECHTEVERGABE.sql,7\d\7d70c3df75ad56d2d7eefb156a7fa409d3a12a69
+t
+D04_ACID(Atomity Consistency Isolation Durability)/01_TRANSACTION.sql,b\9\b97ac4e21e09e7e2d7a2a2bf4f21f66602aa16c9
