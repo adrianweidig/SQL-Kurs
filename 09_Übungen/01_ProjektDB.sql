@@ -61,12 +61,14 @@ CREATE TABLE IF NOT EXISTS Projekt (
 );
 
 CREATE TABLE IF NOT EXISTS MitarbeiterArbeitetInProjekt (
-    Projekt INTEGER,
-    Mitarbeiter_ID INTEGER,
-    PRIMARY KEY (Projekt, Mitarbeiter_ID),
-    FOREIGN KEY MitarbeiterArbeitetInProjekt(Projekt) REFERENCES Projekt(ID)
-    -- FOREIGN KEY MitarbeiterArbeitetInProjekt(Mitarbeiter_ID) REFERENCES Mitarbeiter(Personalnummer)
+    Projekt INTEGER REFERENCES Projekt(ID),
+    Mitarbeiter INTEGER REFERENCES Mitarbeiter(Personalnummer),
+    PRIMARY KEY (Projekt, Mitarbeiter),
+    FOREIGN KEY (Projekt) REFERENCES Projekt(ID),
+    FOREIGN KEY (Mitarbeiter) REFERENCES Mitarbeiter(Personalnummer)
 );
+
+SELECT * FROM ProjektDB.MitarbeiterArbeitetInProjekt;
 
 SAVEPOINT Tabellen_Erzeugt;
 
@@ -75,4 +77,4 @@ COMMIT;
 
 
 
--- ALTER TABLE MitarbeiterArbeitetInProjekt ADD CONSTRAINT FOREIGN KEY MitarbeiterArbeitetInProjekt(Mitarbeiter_ID) REFERENCES Mitarbeiter(Personalnummer);
+-- ALTER TABLE MitarbeiterArbeitetInProjekt ADD CONSTRAINT FOREIGN KEY (Mitarbeiter_ID) REFERENCES Mitarbeiter(Personalnummer);
