@@ -23,10 +23,10 @@ CREATE TABLE IF NOT EXISTS Mitarbeiter_Datenbank.Mitarbeiteraufgaben
 -- ------ INDEX -------------
 
 -- Erzeugt einen einzigartigen, also nicht mehrfach vorkommenden, INDEX auf eine Spalte und deren Werte
-CREATE INDEX Index_Mitarbeiter ON Mitarbeiter(Mitarbeiternummer);
+CREATE INDEX Index_Mitarbeiter ON Mitarbeiter (Mitarbeiternummer);
 
 -- Erzeugt einen einzigartigen Index, welcher auch in der zugehörigen Reihenfolge gespeichert wird
-CREATE INDEX INDEX_NameVorname ON Mitarbeiter(Name, Vorname);
+CREATE INDEX INDEX_NameVorname ON Mitarbeiter (Name, Vorname);
 
 -- ------ INDEX -------------
 -- --------------------------

@@ -13,11 +13,11 @@ CREATE TABLE Kundenverzeichnis
 
 CREATE TABLE Rechnungsverzeichnis
 (
-    ID INTEGER PRIMARY KEY,
-    KundenID INTEGER,
+    ID              INTEGER PRIMARY KEY,
+    KundenID        INTEGER,
     UnnoetigeSpalte VARCHAR(100),
 
-    FOREIGN KEY (KundenID) REFERENCES Kundenverzeichnis(ID) ON UPDATE NO ACTION ON DELETE CASCADE
+    FOREIGN KEY (KundenID) REFERENCES Kundenverzeichnis (ID) ON UPDATE NO ACTION ON DELETE CASCADE
 );
 
 -- -----------------------
@@ -28,26 +28,32 @@ CREATE TABLE Rechnungsverzeichnis
 -- Mögliche Optionen:
 -- ADD spaltenname  - Hinzufügen einer Spalte
 -- DROP spaltenname - Löschen einer Spalte
-ALTER TABLE Rechnungsverzeichnis ADD Betrag Integer;
+ALTER TABLE Rechnungsverzeichnis
+    ADD Betrag Integer;
 
-ALTER TABLE Rechnungsverzeichnis DROP UnnoetigeSpalte;
+ALTER TABLE Rechnungsverzeichnis
+    DROP UnnoetigeSpalte;
 
 -- Anpassen einer Spalte selbst
-ALTER TABLE Rechnungsverzeichnis ALTER COLUMN Betrag SET DEFAULT 0;
+ALTER TABLE Rechnungsverzeichnis
+    ALTER COLUMN Betrag SET DEFAULT 0;
 
 -- Hinzufügen eines Constraints mit Bezug auf die komplette Tabelle, wobei
 -- die Prüfung auf die Spalte Betrag bezogen ist.
-ALTER TABLE  Rechnungsverzeichnis ADD CONSTRAINT Betragsminimum CHECK ( Betrag > 0 );
+ALTER TABLE Rechnungsverzeichnis
+    ADD CONSTRAINT Betragsminimum CHECK ( Betrag > 0 );
 
 -- Löschen des Constraints
-ALTER TABLE Rechnungsverzeichnis DROP CONSTRAINT Betragsminimum;
+ALTER TABLE Rechnungsverzeichnis
+    DROP CONSTRAINT Betragsminimum;
 
 -- Bearbeitet die Eigenschaften der Spalte Name, sodass die Größenbeschränkung
 -- auf 50 angehoben wird. 
 -- BEACHTE:
 -- Sollten betroffene Daten mit einer nun kleineren Beschränkung auskommen
 -- müssen so schlägt der Befehl fehl
-ALTER TABLE Kundenverzeichnis MODIFY COLUMN Name VARCHAR(50);
+ALTER TABLE Kundenverzeichnis
+    MODIFY COLUMN Name VARCHAR(50);
 
 -- ------ ALTER TABLE -------------
 

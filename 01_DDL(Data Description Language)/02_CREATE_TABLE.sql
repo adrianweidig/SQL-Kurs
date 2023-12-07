@@ -64,7 +64,9 @@ CREATE TABLE IF NOT EXISTS Mitarbeiter_Datenbank.Mitarbeiteraufgaben
 -- TEMPORÄRE TABELLE ERZEUGEN
 -- Erzeugt eine temporäre Tabelle, welche weiter bearbeitbar ist und
 -- werden gelöscht sobald die Session beendet wurde.
-CREATE TEMPORARY TABLE temp_table AS SELECT * FROM Mitarbeiter;
+CREATE TEMPORARY TABLE temp_table AS
+SELECT *
+FROM Mitarbeiter;
 
 -- OPTIONALES Löschen der temporären Tabelle
 DROP TEMPORARY TABLE temp_table;

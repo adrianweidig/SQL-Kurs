@@ -40,42 +40,50 @@ CREATE TABLE Schueler
 (
     SchuelerID   Integer Primary Key,
     Klassenstufe Integer,
-    FOREIGN KEY (Klassenstufe) REFERENCES Klassenstufe(Klassenstufe)
+    FOREIGN KEY (Klassenstufe) REFERENCES Klassenstufe (Klassenstufe)
 );
 
 INSERT INTO Lehrer
-    (LehrerID, Name) VALUES
-                         (1,'Hugo'),
-                         (2, 'Heinz'),
-                         (3, 'Bernd');
+    (LehrerID, Name)
+VALUES (1, 'Hugo'),
+       (2, 'Heinz'),
+       (3, 'Bernd');
 
 INSERT INTO Klassenstufe
-    (Klassenstufe, Lehrer) VALUES
-                               (1, 1),
-                               (2, 1),
-                               (3, 2),
-                               (4, 3);
+    (Klassenstufe, Lehrer)
+VALUES (1, 1),
+       (2, 1),
+       (3, 2),
+       (4, 3);
 
 INSERT INTO Schueler
-    (SchuelerID, Klassenstufe) VALUES
-                                   (1, 1),
-                                   (2, 1),
-                                   (3, 2),
-                                   (4, 1),
-                                   (5, 3),
-                                   (6, 4),
-                                   (7, 2),
-                                   (8, 3);
+    (SchuelerID, Klassenstufe)
+VALUES (1, 1),
+       (2, 1),
+       (3, 2),
+       (4, 1),
+       (5, 3),
+       (6, 4),
+       (7, 2),
+       (8, 3);
 
-SELECT * FROM Schueler;
-SELECT * FROM Lehrer;
-SELECT * FROM Klassenstufe;
-
-SELECT Schueler.SchuelerID as 'Schueler', Klassenstufe.Klassenstufe as 'Klasse', Lehrer.Name as 'Klassenlehrer' FROM Schueler, Klassenstufe, Lehrer WHERE Schueler.Klassenstufe = Klassenstufe.Klassenstufe AND Klassenstufe.Lehrer = Lehrer.LehrerID;
+SELECT *
+FROM Schueler;
+SELECT *
+FROM Lehrer;
+SELECT *
+FROM Klassenstufe;
 
 SELECT Schueler.SchuelerID as 'Schueler', Klassenstufe.Klassenstufe as 'Klasse', Lehrer.Name as 'Klassenlehrer'
-    FROM Schueler
-    JOIN Klassenstufe ON Schueler.Klassenstufe < 3 AND Schueler.Klassenstufe = Klassenstufe.Klassenstufe
-    JOIN Lehrer ON Klassenstufe.Lehrer = Lehrer.LehrerID;
+FROM Schueler,
+     Klassenstufe,
+     Lehrer
+WHERE Schueler.Klassenstufe = Klassenstufe.Klassenstufe
+  AND Klassenstufe.Lehrer = Lehrer.LehrerID;
+
+SELECT Schueler.SchuelerID as 'Schueler', Klassenstufe.Klassenstufe as 'Klasse', Lehrer.Name as 'Klassenlehrer'
+FROM Schueler
+         JOIN Klassenstufe ON Schueler.Klassenstufe < 3 AND Schueler.Klassenstufe = Klassenstufe.Klassenstufe
+         JOIN Lehrer ON Klassenstufe.Lehrer = Lehrer.LehrerID;
 
 COMMIT;

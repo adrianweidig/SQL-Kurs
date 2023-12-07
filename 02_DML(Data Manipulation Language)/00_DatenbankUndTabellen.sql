@@ -23,18 +23,16 @@ CREATE TABLE IF NOT EXISTS Mitarbeiteraufgaben
 -- Beispiel-Einträge für die Tabelle Mitarbeiter
 
 INSERT INTO Mitarbeiter (Mitarbeiternummer, Name, Vorname, Ort, Lebensalter, Beruf, Telefonnummer)
-VALUES
-    ('M001', 'Mustermann', 'Max', 'Berlin', 30, 'Entwickler', 1234),
-    ('M002', 'Musterfrau', 'Maria', 'Hamburg', 28, 'Designer', 5678),
-    ('M003', 'Beispiel', 'Peter', 'München', 35, 'Manager', 9876);
+VALUES ('M001', 'Mustermann', 'Max', 'Berlin', 30, 'Entwickler', 1234),
+       ('M002', 'Musterfrau', 'Maria', 'Hamburg', 28, 'Designer', 5678),
+       ('M003', 'Beispiel', 'Peter', 'München', 35, 'Manager', 9876);
 
 -- Beispiel-Einträge für die Tabelle Mitarbeiter_Datenbank.Mitarbeiteraufgaben
 
 INSERT INTO Mitarbeiteraufgaben (Aufgabennummer, Mitarbeiternummer, Istverteilungsbetrag)
-VALUES
-    ('A01', 'M001', 0.8),
-    ('A02', 'M002', 0.6),
-    ('A01', 'M003', 0.9),
-    ('A03', 'M001', 0.5);
+VALUES ('A01', 'M001', 0.8),
+       ('A02', 'M002', 0.6),
+       ('A01', 'M003', 0.9),
+       ('A03', 'M001', 0.5);
 
 DROP TABLE Mitarbeiter, Mitarbeiteraufgaben;

@@ -31,16 +31,20 @@ START TRANSACTION;
 -- falls ein Fehler auftritt
 SAVEPOINT vor_allem;
 
-CREATE TEMPORARY TABLE temp_db SELECT * FROM mitarbeiter;
+CREATE TEMPORARY TABLE temp_db
+SELECT *
+FROM mitarbeiter;
 
 -- s.o.
 SAVEPOINT temp_db_erzeugt;
 -- Entfernt den vorherigen Savepoint
 RELEASE SAVEPOINT vor_allem;
 
-ALTER TABLE temp_db DROP COLUMN Ort, Lebensalter, Beruf, Telefonnummer;
+ALTER TABLE temp_db
+    DROP COLUMN Ort, Lebensalter, Beruf, Telefonnummer;
 
-SELECT * FROM temp_db;
+SELECT *
+FROM temp_db;
 
 -- Wenn in diesem Bereich bereits ein Fehler auftaucht wird ROLLBACK implizit
 -- ausgeführt, was dafür sorgt, dass alle bisher ausgeführten Anfragen rückgängig
