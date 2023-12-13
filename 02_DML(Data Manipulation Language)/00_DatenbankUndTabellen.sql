@@ -1,7 +1,8 @@
 CREATE DATABASE IF NOT EXISTS TestDB;
 USE TestDB;
 
-CREATE TABLE IF NOT EXISTS Mitarbeiter
+CREATE TABLE IF NOT EXISTS
+    Mitarbeiter
 (
     Mitarbeiternummer CHARACTER(5) PRIMARY KEY,
     Name              CHARACTER(10) NOT NULL,
@@ -12,7 +13,8 @@ CREATE TABLE IF NOT EXISTS Mitarbeiter
     Telefonnummer     INTEGER CHECK (1000 < Telefonnummer < 9999)
 );
 
-CREATE TABLE IF NOT EXISTS Mitarbeiteraufgaben
+CREATE TABLE IF NOT EXISTS
+    Mitarbeiteraufgaben
 (
     Aufgabennummer       CHARACTER(3),
     Mitarbeiternummer    CHARACTER(5) REFERENCES Mitarbeiter (Mitarbeiternummer),
